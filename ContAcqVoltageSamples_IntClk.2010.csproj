@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+	<PropertyGroup>
+		<ProjectType>Local</ProjectType>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<ProductVersion>10.0.21006.1</ProductVersion>
+		<ApplicationIcon>App.ico</ApplicationIcon>
+		<Deterministic>false</Deterministic>
+		<AssemblyName>ContAcqVoltageSamples_IntClk</AssemblyName>
+		<OutputType>WinExe</OutputType>
+		<RootNamespace>NationalInstruments.Examples.ContAcqVoltageSamples_IntClk</RootNamespace>
+		<RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+		<TargetFramework>net48</TargetFramework>
+		<GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+		<UseWindowsForms>true</UseWindowsForms>
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="NationalInstruments.Common.dll" />
+		<None Remove="NationalInstruments.DAQmx.dll" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+		<PackageReference Include="System.Resources.Extensions" Version="4.7.1" />
+		<Reference Include="NationalInstruments.Common">
+			<HintPath>.\NationalInstruments.Common.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+		<Reference Include="NationalInstruments.DAQmx">
+			<HintPath>.\NationalInstruments.DAQmx.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+		<Reference Include="System">
+			<Name>System</Name>
+			<HintPath />
+		</Reference>
+		<Reference Include="System.Data">
+			<Name>System.Data</Name>
+			<HintPath />
+		</Reference>
+		<Reference Include="System.Drawing">
+			<Name>System.Drawing</Name>
+			<HintPath />
+		</Reference>
+		<Reference Include="System.Windows.Forms">
+			<Name>System.Windows.Forms</Name>
+			<HintPath />
+		</Reference>
+		<Reference Include="System.Xml">
+			<Name>System.Xml</Name>
+			<HintPath />
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="App.ico" />
+	</ItemGroup>
+</Project>
